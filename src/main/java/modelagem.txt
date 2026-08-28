@@ -1,0 +1,79 @@
++-------------------------+
+|          Livro          |
++-------------------------+
+| - titulo: String        |
+| - autor: String         |
+| - isbn: String          |
+| - anoPublicacao: int    |
+| - quantidadeDisponivel: int |
++-------------------------+
+| + emprestar()           |
+| + devolver()            |
+| + estaDisponivel()      |
+| + exibirDados()         |
++-------------------------+
+
+
++-------------------------+
+|        Usuario          |
++-------------------------+
+| - nome: String          |
+| - cpf: String           |
+| - matricula: String     |
+| - email: String         |
++-------------------------+
+| + exibirDados()         |
++-------------------------+
+
+
++-------------------------------+
+|          Emprestimo           |
++-------------------------------+
+| - dataEmprestimo: String      |
+| - dataDevolucao: String       |
+| - livro: Livro                |
+| - usuario: Usuario            |
++-------------------------------+
+| + registrarDevolucao()        |
+| + exibirDados()               |
++-------------------------------+
+
++--------------------------------------+
+|             Biblioteca               |
++--------------------------------------+
+| - livros: ArrayList<Livro>           |
+| - usuarios: ArrayList<Usuario>       |
+| - emprestimos: ArrayList<Emprestimo> |
++--------------------------------------+
+| + cadastrarLivro()                   |
+| + cadastrarUsuario()                 |
+| + realizarEmprestimo()               |
+| + registrarDevolucao()               |
+| + listarLivros()                     |
+| + consultarEmprestimos()             |
++--------------------------------------+
+
+
+Biblioteca
+   |
+   | possui vários
+   v
+Livro
+
+Biblioteca
+   |
+   | possui vários
+   v
+Usuario
+
+Biblioteca
+   |
+   | possui vários
+   v
+Emprestimo
+
+Emprestimo
+   |
+   +---- possui 1 Livro
+   |
+   +---- possui 1 Usuario
